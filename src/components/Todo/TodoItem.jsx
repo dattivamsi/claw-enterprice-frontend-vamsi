@@ -28,7 +28,6 @@ const TodoItem = ({ todo, onUpdate, onDelete }) => {
         </div>
       ) : (
         <>
-        <Table />
         <div>
           <span>{todo.description}</span>
           <TodoActions todo={todo} onUpdate={onUpdate} onDelete={onDelete} />
