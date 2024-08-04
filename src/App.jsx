@@ -12,14 +12,18 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/login" element={!token ? <LoginPage /> : <Navigate to="/todos" />} />
-        <Route path="/register" element={!token ? <RegisterPage /> : <Navigate to="/todos" />} />
-        {/* <Route
-          path="/todos"
-          element={token ? <TodoPage /> : <Navigate to="/login" />}
-        /> */}
-         <Route path="/todos" element={<PrivateRoute element={TodoPage} />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/login"  index element={<LoginPage /> } />
+        <Route path="/register" element={<RegisterPage /> } />
+        
+        <Route 
+          path="/todos" 
+          element={
+            <PrivateRoute>
+              <TodoPage />
+            </PrivateRoute>
+          } 
+        />
       </Routes>
     </Router>
   );
