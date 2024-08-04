@@ -38,6 +38,7 @@ const LoginForm = () => {
   return (
     <div className="login-form-container">
       <div className="login-form">
+      <h1 style={{textAlign:"center"}}>Register</h1>
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormInput
             name="email"
