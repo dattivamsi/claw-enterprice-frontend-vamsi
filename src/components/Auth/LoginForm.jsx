@@ -24,7 +24,8 @@ const LoginForm = () => {
       localStorage.setItem('token', response.token);
       navigate("/todos"); 
     } catch (err) {
-      console.error(err);
+      
+      alert(err?.response?.data?.message)
     }
   };
 
