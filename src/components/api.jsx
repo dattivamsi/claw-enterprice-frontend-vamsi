@@ -22,8 +22,10 @@ export const fetchTodos = async () => {
   return response.data;
 };
 
-export const createTodo = async (description) => {
-  const response = await axios.post(`${API_URL}/todos`, { description }, { headers: getAuthHeaders() });
+export const createTodo = async (description,status) => {
+  console.log(status);
+  
+  const response = await axios.post(`${API_URL}/todos`, { description,status }, { headers: getAuthHeaders() });
   return response.data;
 };
 

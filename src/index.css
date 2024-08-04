@@ -154,3 +154,26 @@ button:focus-visible {
 .todo-image-container{
   border-radius: 50%;
 }
+.status{
+  background-color: #35aa09;
+  border-radius: 5px;
+}
+.In-status{
+  background-color: #f6a907;
+  border-radius: 5px;
+}
+.complted::before{
+  content: "•  ";
+}
+.status p{
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0 0.4rem;
+}
+.In-status p{
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0 0.4rem;
+}
